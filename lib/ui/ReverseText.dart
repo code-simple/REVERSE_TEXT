@@ -16,39 +16,39 @@ class ReverseTextState extends State<ReverseText> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: new AppBar(
-        title: new Text('Reverse Text'),
-        centerTitle: true,
-        backgroundColor: Colors.black,
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.info, color: Colors.white),
-            onPressed: () {
-              showDialog(
-                  context: context,
-                  builder: (BuildContext context) {
-                    return AlertDialog(
-                      title: Center(child: Text("About")),
-                      content: Text(
-                          "Simple Tool to Reverse Text\n\n            By Imran Khan"),
-                      actions: <Widget>[
-                        FlatButton(
-                          child: Text('OK'),
-                          onPressed: () {
-                            Navigator.of(context).pop();
-                          },
-                        )
-                      ],
-                    );
-                  });
-            },
-          )
-        ],
-      ),
-      body: new Container(
-          alignment: Alignment.center,
-          child: new Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+        appBar: new AppBar(
+          title: new Text('Reverse Text'),
+          centerTitle: true,
+          backgroundColor: Colors.black,
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(Icons.info, color: Colors.white),
+              onPressed: () {
+                showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return AlertDialog(
+                        title: Center(child: Text("About")),
+                        content: Text(
+                            "Simple Tool to Reverse Text\n\n            By Imran Khan"),
+                        actions: <Widget>[
+                          FlatButton(
+                            child: Text('OK'),
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                          )
+                        ],
+                      );
+                    });
+              },
+            )
+          ],
+        ),
+        body: Center(
+          child: new ListView(
+            shrinkWrap: true,
+            padding: const EdgeInsets.all(20.0),
             children: <Widget>[
               new TextField(
                 style: TextStyle(fontSize: 30),
@@ -108,8 +108,8 @@ class ReverseTextState extends State<ReverseText> {
                     style: TextStyle(fontSize: 30, color: Colors.white),
                   ))
             ],
-          )),
-    );
+          ),
+        ));
   }
 }
 

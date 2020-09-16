@@ -18,10 +18,10 @@ class CustomColor extends StatelessWidget {
           borderRadius: BorderRadius.circular(50),
         ),
         fillColor: myColor,
-        padding: EdgeInsets.all(20.0),
+        padding: EdgeInsets.all(14.0),
         child: Text(
           text,
-          style: TextStyle(fontSize: 40, color: Colors.white),
+          style: TextStyle(fontSize: 30, color: Colors.white),
         ),
       ),
     ));
